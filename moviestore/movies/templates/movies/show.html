@@ -21,7 +21,14 @@
                 </div>
             </div>
         </section>
-        <hr class="my-5" />
+        <hr class="my-5" style="border:5px solid grey; border-radius:5px" />
+
+        <section class-"mb-4">
+            <header>
+                <h1 class="h2 mb-0">Reviews</h1>
+                <hr class="mt-0" />
+            </header>
+        </section>
         {% if user.is_authenticated %}
         <section class="mt-4 row justify-content-center">
             <div class="col-12">
@@ -45,6 +52,17 @@
             </div>
         </section>
         {% endif %}
+        <section class=my-4>
+            <ul class="list-group">
+                {% for review in template_data.reviews %}
+                <li class="list-group-item pb-3 pt-3">
+                    <h2 class="h5">Review by {{ review.user.username }}</h2>
+                    <p class="mb-2 text-muted">{{ review.date }}</p>
+                    <p>{{ review.comment }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
     </div>
 </main>
 {% endblock content %}
