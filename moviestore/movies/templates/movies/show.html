@@ -3,7 +3,7 @@
 {% load static %}
 <!-- Product section-->
 <main class="py-5">
-    <div class="container px-4 px-lg-5 my-5">
+    <div class="container px-4 px-lg-5">
         <section class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ template_data.movie.image.url }}" alt="{{ template_data.movie.name }}" /></div>
             <div class="col-md-6">
@@ -52,13 +52,18 @@
             </div>
         </section>
         {% endif %}
-        <section class=my-4>
+        <section class="my-4">
             <ul class="list-group">
                 {% for review in template_data.reviews %}
                 <li class="list-group-item pb-3 pt-3">
-                    <h2 class="h5">Review by {{ review.user.username }}</h2>
-                    <p class="mb-2 text-muted">{{ review.date }}</p>
+                    <h2 class="h6 mb-0">Review by {{ review.user.username }}</h2>
+                    <p class="mb-2 text-muted" style="font-size:12px;">{{ review.date }}</p>
                     <p>{{ review.comment }}</p>
+                    {% if user.is_authenticated and user == review.user %}
+                    <a class="btn btn-warning btn-sm" href="{% url 'movies.edit_review' id=template_data.movie.id review_id=review.id %}">
+                        Edit
+                    </a>
+                    {% endif %}
                 </li>
                 {% endfor %}
             </ul>
