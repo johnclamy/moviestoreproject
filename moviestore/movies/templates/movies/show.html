@@ -12,12 +12,25 @@
                     <span>£{{ template_data.movie.price }}.00</span>
                 </div>
                 <p class="lead">{{ template_data.movie.description }}</p>
-                <div class="d-flex">
-                    <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                    <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                        <i class="bi-cart-fill me-1"></i>
-                        Add to cart
-                    </button>
+                <div class="card">
+                    <div class="card-body">
+                        <form method="POST" action="{% url 'cart.add' id=template_data.movie.id %}">
+                            <div class="row d-flex justify-content-center">
+                                {% csrf_token %}
+                                <div class="col-auto">
+                                    <div class="input-group col-auto">
+                                        <div class="input-group-text">Quantity</div>
+                                        <input type="number" min="1" max="10" class="form-control" name="quantity" value="1">
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn btn-dark" type="submit">
+                                        <i class="fa-solid fa-cart-plus"></i>&nbsp; Add to cart
+                                    </button>
+                                </div>
+                            </div> <!-- end inner form row-->
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
