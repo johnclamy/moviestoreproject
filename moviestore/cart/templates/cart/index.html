@@ -36,7 +36,12 @@
         <a class="btn btn-outline-secondary mb-2 w-75 w-md-50" href="">
             <b>Total to pay:</b> £{{ template_data.cart_total }}.00
         </a>
-    </div>
+        {% if template_data.movies_in_cart|length > 0 %}
+        <a class="btn btn-danger btn-sm" href="{% url 'cart.clear' %}">
+            Remove all movies from Cart
+        </a>
+        {% endif %}
+        </div>
     </section>
 </main>
 {% endblock content %}
