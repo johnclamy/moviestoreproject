@@ -32,4 +32,4 @@ def add(request, id):
 
 def clear(request):
     request.session['cart'] = {}
-    return redirect['cart.index']
+    return redirect('cart.index')
