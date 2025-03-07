@@ -13,7 +13,7 @@ class Order(models.Model):
         return str(self.id) + ' - ' + self.user.username
 
 
-class Item(models.model):
+class Item(models.Model):
     id = models.AutoField(primary_key=True)
     price = models.IntegerField()
     quantity = models.IntegerField()
