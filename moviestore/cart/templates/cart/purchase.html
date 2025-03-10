@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="p-3">
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col mx-auto mb-3">
+                <div class="alert alert-success" role="alert">
+                    <h1 class="alert-heading">Purchase Completed</h1>
+                    <hr />
+                    <p class="mb-0 lead">
+                        Congratulations, purchase completed. Order number is: <b>#{{ template_data.order_id }}</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
