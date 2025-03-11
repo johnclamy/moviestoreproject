@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class='p-3'>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col mx-auto mb-3 alert alert-light" role="alert">
+                <h1 class="alert-heading text-capitalize">my orders</h1>  
+                <hr>
+                {% for order in template_data_orders %}
+                <div class="card mb-4">
+                    <div class="card-header">Order #{{ order.id }}</div>
+                    <div class="card-body">
+                        <b>Date:</b> {{ order.date  }}<br />
+                        <b>Total:</b> £{{ order.total }}.00<br />
+                        <table class="table table-bordered table-striped text-center mt-3">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Item ID</th>
+                                    <th scope="col">Movie</th>
+                                    <th scope="col"> Price</th>
+                                    <th scope="col">Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in order.items_set.all%}
+                                <tr>
+                                    <td>{{ item.movie.id }}</td>
+                                    <td>
+                                        <a class="btn btn-link" href="{% url 'movies.show' id=item.movie.id %}">
+                                            {{ item.movie.name }}
+                                        </a>
+                                    </td>
+                                    <td>£{{ item.movie.price }}.00</td>
+                                    <td>{{ item.quantity }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
