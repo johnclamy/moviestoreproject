@@ -1,12 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Home page</title>
-    </head>
-    <body>
-        <header>
-            <h1>Welcome to the Home page</h1>
-        </header>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+    <section class="index-banner">
+        <div class="container">
+            <div class="columns is-justify-content-center">
+                <div class="column is-9-desktop is-10-tablet">
+                    <div class="block has-text-centered text-white">
+                        <span class="is-block mb-4">
+                            <p class="is-capitalized"><em>affordable</em> entertainment for the whole family</p>
+                        </span>
+                        <h1 class="mb-5 is-capitalized">bright star movies</h1>
+                        <p class="mb-6">Excepteur sint cupidatat non proident. Sunt in culpa <br>qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
