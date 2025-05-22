@@ -1,0 +1,59 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,700&family=Noto+Sans&display=swap";
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    line-height: 1.7;
+    font-family: "Noto Sans", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #464646;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "Josefin Sans", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+  color: #232323;
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+}
+
+h2, .h2 {
+  line-height: 1.6;
+  font-size: 26px;
+}
+
+h3, .h3 {
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+h4, .h4 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h5, .h5 {
+  font-size: 18px;
+}
+
+h6, .h6 {
+  font-size: 14px;
+}
+
+
+
+
+
+
+/*******************/
+/**** Home page  ***/
+/*******************/
+/* .index-banner {
+    background: url("/static/imgs/banner.jpg") no-repeat fixed;
+    background-size: 100% auto;
+} */
