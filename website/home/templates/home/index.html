@@ -1,13 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Shop Homepage - Start Bootstrap Template</title>
-    </head>
-    <body>
-        <h1>Welcome to our Home page</h1>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+    <header class="masthead banner text-center text-white py-4">
+        <div class="container d-flex align-items-center flex-column pt-2">
+            <h1 class="display-1 text-uppercase">webflix</h1>
+            <p class="lead text-capitalize">your number one movie network</p>
+        </div>
+    </header>
+    <section class="p-3">
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col mx-auto text-center mb-3">
+                    <h1>Welcome to the movie store of your dreams!</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
