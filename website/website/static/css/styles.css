@@ -1,0 +1,4 @@
+.banner {
+    background: url("/static/imgs/banner.jpg") no-repeat fixed;
+    background-size: 100% auto;
+}
