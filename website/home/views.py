@@ -15,4 +15,13 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'home/about.html')
+    template_data = {}
+    template_data['title'] = 'Find out about us | About page'
+
+    return render(
+        request,
+        'home/about.html',
+        {
+            'template_data': template_data
+        }
+    )
