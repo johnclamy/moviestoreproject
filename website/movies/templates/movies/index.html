@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<section class="p-3">
+    <div class="container">
+        <div class="row mt-3">
+            <header class="col mx-auto mb-3">
+                <h1>List of Movies</h1>
+                <hr />
+            </header>
+        </div>
+        <article class="p5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    {% for movie in template_data.movies %}
+                        <section class="col mb-5">
+                            <div class="card h-100 border border-warning">
+                                <img class="card-img-top rounded" src="{% static 'imgs/posters/bitcoin-heist.jpg' %}" />
+                                <div class="card-body p-4">
+                                    <div class="text-center">
+                                        <p class="fw-bolder">{{ movie.name }}</p>
+                                        <p class="lead">£{{ movie.price }}</p>
+                                    </div>
+                                </div>
+                                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                    <div class="text-center">
+                                        <a class="btn btn-outline-dark mt-auto" href="#">View details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    {% endfor %}
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+{% endblock content %}
