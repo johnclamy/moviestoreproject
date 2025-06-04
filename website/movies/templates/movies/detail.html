@@ -9,14 +9,14 @@
         <div class="col-md-6">
             <div class="small mb-1">{{ template_data.movie.rating }}</div>
             <h1 class="display-5 fw-bolder">{{ template_data.movie.name }}</h1>
-            <div class="fs-5 mb-5">
-                <span>£{{ template_data.movie.price }}</span>
-            </div>
+            <p class="fs-3 mt-3 mb-5 text-end">
+                <span class="rounded-circle border border-warning-subtle p-2">£{{ template_data.movie.price }}</span>
+            </p>
             <p class="lead">{{ template_data.movie.description}}</p>
             <div class="d-flex">
-                <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                <button class="btn btn-warning flex-shrink-0" type="button">
-                    <i class="fa-solid fa-cart-shopping"></i>&nbsp;
+                <input class="form-control form-control-lg text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                <button class="btn btn-lg btn-warning flex-shrink-0" type="button">
+                    <i class="fa-solid fa-cart-plus"></i>&nbsp;
                     Add to cart
                 </button>
             </div>
