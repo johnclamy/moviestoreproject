@@ -65,3 +65,20 @@ def index(request):
             'template_data': template_data
         }
     )
+
+
+def detail(request, id):
+    template_data = {}
+    movie = movies[id - 1]
+
+    template_data['title'] = movie['name']
+    template_data['movie'] = movie
+
+    return render(
+        request,
+        'movies/detail.html',
+        {
+            'template_data': template_data
+        }
+    )
+    
