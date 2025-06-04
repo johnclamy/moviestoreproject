@@ -15,16 +15,24 @@
                     {% for movie in template_data.movies %}
                         <section class="col mb-5">
                             <div class="card h-100 border border-warning">
-                                <img class="card-img-top rounded" src="{% static 'imgs/posters/bitcoin-heist.jpg' %}" />
+                                <a href="{% url 'movies.detail' id=movie.id %}" class="text-decoration-none">
+                                    <img class="card-img-top rounded" src="{% static 'imgs/posters/bitcoin-heist.jpg' %}" />
+                                </a>
                                 <div class="card-body p-4">
                                     <div class="text-center">
-                                        <p class="fw-bolder">{{ movie.name }}</p>
-                                        <p class="lead">£{{ movie.price }}</p>
+                                        <p>
+                                            <a href="{% url 'movies.detail' id=movie.id %}" class="fw-light lead text-dark text-decoration-none">{{ movie.name }}</a>
+                                        </p>
+                                        <p class="lead">
+                                            <span class="badge text-bg-warning">£{{ movie.price }}</span>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                     <div class="text-center">
-                                        <a class="btn btn-outline-dark mt-auto" href="#">View details</a>
+                                        <a class="btn btn-outline-dark mt-auto" href="{% url 'movies.detail' id=movie.id %}">
+                                            View details
+                                        </a>
                                     </div>
                                 </div>
                             </div>
