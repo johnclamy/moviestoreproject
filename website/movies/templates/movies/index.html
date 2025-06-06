@@ -16,7 +16,7 @@
                         <section class="col mb-5">
                             <div class="card h-100 border border-warning">
                                 <a href="{% url 'movies.detail' id=movie.id %}" class="text-decoration-none">
-                                    <img class="card-img-top rounded" src="{% static 'imgs/posters/bitcoin-heist.jpg' %}" />
+                                    <img class="card-img-top rounded" src="{{ movie.image.url }}" />
                                 </a>
                                 <div class="card-body p-4">
                                     <div class="text-center">
