@@ -18,9 +18,9 @@ def index(request):
 
 def detail(request, id):
     template_data = {}
-    movie = movies[id - 1]
+    movie = Movie.objects.get(id=id)
 
-    template_data['title'] = movie['name']
+    template_data['title'] = movie.name
     template_data['movie'] = movie
 
     return render(
