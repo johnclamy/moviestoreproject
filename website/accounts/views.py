@@ -1,6 +1,5 @@
-from django.shortcuts import render
-from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import redirect
+from django.shortcuts import render, redirect
+from .forms import CustomUserCreationForm
 
 
 def signup(request):
@@ -8,7 +7,7 @@ def signup(request):
     template_data['title'] = 'Sign Up'
 
     if request.method == 'GET':
-        template_data['form'] = UserCreationForm()
+        template_data['form'] = CustomUserCreationForm()
 
         return render(
             request,
@@ -18,7 +17,7 @@ def signup(request):
             }
         )
     elif request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
 
         if form.is_valid():
             form.save()
