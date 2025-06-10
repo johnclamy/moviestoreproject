@@ -1,6 +1,13 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login as auth_login, authenticate
+from django.contrib.auth import login as auth_login, authenticate, logout as auth_logout
+from django.contrib.auth.decorators import login_required
 from .forms import CustomUserCreationForm, CustomErrorList
+
+
+@login_required
+def logout(request):
+    auth_logout(request)
+    return redirect('home.index')
 
 
 def login(request):
