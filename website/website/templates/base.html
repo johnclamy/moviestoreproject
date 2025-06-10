@@ -31,7 +31,7 @@
                     </ul>
                     <section class="d-flex flex-column flex-lg-row">
                         {% if user.is_authenticated %}
-                            <a style="width: 7rem" class="btn btn-dark text-capitalize me-lg-3 mb-4 mb-lg-0" href="{% url 'accounts.logout' %}">logout ({{ user.username }})</a>
+                            <a style="max-width: 14rem" class="btn btn-dark text-capitalize me-lg-3 mb-4 mb-lg-0" href="{% url 'accounts.logout' %}">logout&nbsp; ({{ user.username }})</a>
                         {% else %}
                             <a style="width: 7rem" class="btn btn-warning text-capitalize me-lg-3 mb-4 mb-lg-0" href="{% url 'accounts.login' %}">login</a>
                             <a style="width: 7rem" class="btn btn-dark text-capitalize me-lg-3 mb-4 mb-lg-0" href="{% url 'accounts.signup' %}">sign up</a>
