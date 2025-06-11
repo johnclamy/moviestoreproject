@@ -50,7 +50,10 @@ def create_review(request, id):
         review.comment = request.POST['comment']
         review.movie = movie
         review.save()
+        return redirect('movies.detail', id=id)
+    else:
+        return redirect('movies.detail', id=id)
 
-    return redirect('movies.detail', id=id)
+    
         
     
