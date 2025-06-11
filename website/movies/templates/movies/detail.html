@@ -2,7 +2,7 @@
 {% block content %}
 {% load static %}
 <div class="container px-3 px-lg-4 my-5">
-    <article class="row gx-4 gx-lg-5 align-items-center">
+    <article class="row mb-5 gx-4 gx-lg-5 align-items-center">
         <div class="col-md-6">
             <img class="card-img-top mb-5 mb-md-0 rounded" src="{{ template_data.movie.image.url }}" alt="{{ template_data.movie.name }}" />
         </div>
@@ -22,19 +22,19 @@
         </div>
     </article>
     {% if user.is_authenticated %}
-    <section class="container mt-4">
+    <section class="container mt-5 pt-3">
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="card shadow p-3 mb-4 rounded">
                     <div class="card-body">
-                        <b class="text-start">Create a review</b><br /><br />
+                        <b class="text-start lead fw-bold">Create a review</b><br /><br />
                         <form method="POST" action="{% url 'movies.create_review' id=template_data.movie.id %}">
                             {% csrf_token %}
                             <div class="mb-3">
                                 <label for="comment">Comment:</label>
-                                <textarea name="comment" required class="form-control" id="comment"></textarea>
+                                <textarea name="comment" required class="form-control" rows="5" id="comment"></textarea>
                             </div>
-                            <div class="text-center">
+                            <div class="text-start mt-3">
                                 <button type="submit" class="btn bg-dark text-white">Add Review</button>
                             </div>
                         </form>
