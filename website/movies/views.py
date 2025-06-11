@@ -27,9 +27,11 @@ def index(request):
 def detail(request, id):
     template_data = {}
     movie = Movie.objects.get(id=id)
+    reviews = Review.objects.filter(movie=movie)
 
     template_data['title'] = movie.name
     template_data['movie'] = movie
+    template_data['reviews'] = reviews
 
     return render(
         request,
