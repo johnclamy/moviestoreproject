@@ -21,6 +21,23 @@
             </div>
         </div>
     </article>
+    <section class="my-5">
+        <header>
+            <h1 class="h3"></h1>
+            <hr />
+        </header>
+        <ulclass="list-group">
+            {% for review in template_data.reviews %}
+            <li class="list-group-item pb-3 pt-3">
+                <h2 class="h5 card-title">
+                    Review by {{ review.user.username }}
+                </h2>
+                <p class="small card-subtitle mb-2 text-muted">{{ review.date }}</p>
+                <p class="card-text">{{ review.comment }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
     {% if user.is_authenticated %}
     <section class="container mt-5 pt-3">
         <div class="row justify-content-center">
