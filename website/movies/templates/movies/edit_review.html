@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="p-3">
+    <div class="container">
+        <div class="row mt-3">
+            <section class="col mx-auto mb-3">
+                <header>
+                    <h1 class="h2 text-capitalize">edit review</h1>
+                    <hr />
+                </header>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="comment">Comment:</label>
+                        <textarea name="comment" rows="3" required class="form-control" id="comment">
+                            {{ template_data.review.comment }}
+                        </textarea>
+                    </div>
+                    <div class="text-start">
+                        <button type="submit" class="btn bg-dark text-white text-capitalize">
+                            edit review
+                        </button>
+                    </div>
+                </form>
+            </seciton>
+        </div>
+    </div>
+</div>
+{% endblock content %}
