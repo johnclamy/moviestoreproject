@@ -82,3 +82,10 @@ def edit_review(request, id, review_id):
         review.save()
 
     return redirect('movies.detail', id=id)
+
+
+@login_required
+def delete_review(request, id, review_id):
+    review = get_object_or_404(Review, id=review_id, user=request.user)
+    review.delete()
+    return redirect('movies.detail', id=id)
