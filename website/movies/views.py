@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Movie, Review
 
@@ -56,5 +56,29 @@ def create_review(request, id):
     return redirect('movies.detail', id=id)
 
     
-        
+@login_required
+def edit_review(request, id, review_id):
+    review = get_object_or_404(Review, id=review_id)
+
+    if request.user != review.user:
+        return redirect('movies.detail', id=id)
+
+    if request.method == 'GET':
+        template_data = {}
+        template_data['title'] = 'Edit Review'
+        template_data['review'] = review
+
+        return render(
+            request,
+            'movies/edit_review.html',
+            {
+                'template_data': template_data
+            }
+        )
     
+    elif request.method == "POST" and request.POST['comment'].strip() != '':
+        review = Review.objects.get(id=review_id)
+        review.comment = request.POST['comment']
+        review.save()
+
+    return redirect('movies.detail', id=id)
