@@ -38,6 +38,7 @@
                 <a class="btn btn-warning text-capitalize" href="{% url 'movies.edit_review' id=template_data.movie.id review_id=review.id %}">
                     edit
                 </a>
+                <a class="btn btn-dark text-capitalize ms-3" href="{% url 'movies.delete_review' id=template_data.movie.id review_id=review.id %}">delete</a>
                 {% endif %}
             </li>
             {% endfor %}
