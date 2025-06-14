@@ -12,13 +12,14 @@
                 <span class="rounded-circle border border-warning-subtle p-2">£{{ template_data.movie.price }}</span>
             </p>
             <p class="lead">{{ template_data.movie.description}}</p>
-            <div class="d-flex">
-                <input class="form-control form-control-lg text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                <button class="btn btn-lg btn-warning flex-shrink-0" type="button">
+            <form method="POST" action="{% url 'cart.add' id=template_data.movie.id %}" class="d-flex">
+                {% csrf_token %}
+                <input class="form-control form-control-lg text-center me-3" min="1" max="100" name="quantity" type="number" value="1" style="max-width: 3rem" />
+                <button class="btn btn-lg btn-warning flex-shrink-0" type="submit">
                     <i class="fa-solid fa-cart-plus"></i>&nbsp;
                     Add to cart
                 </button>
-            </div>
+            </form>
         </div>
     </article>
     <section class="my-5">
