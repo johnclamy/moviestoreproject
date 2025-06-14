@@ -37,11 +37,11 @@
                             <a style="width: 7rem" class="btn btn-dark text-capitalize me-lg-3 mb-4 mb-lg-0" href="{% url 'accounts.signup' %}">sign up</a>
                         {% endif %}
                         <form>
-                            <button class="btn btn-outline-warning text-dark" type="submit">
+                            <a class="btn btn-outline-warning text-dark" href="{% url 'cart.index' %}">
                                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;
                                 <b class="fw-normal">Cart</b>
                                 <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                            </button>
+                            </a>
                         </form>
                     </section>
                 </div>
