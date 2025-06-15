@@ -34,8 +34,14 @@
         </section>
         <section class="row">
             <div class="text-end mb-5">
-                <a class="btn btn-outline-secondary my-4 btn-lg">
-                    <b>Total to pay:</b> £{{ template_data.cart_total }}
+                {% if template_data.movies_in_cart|length > 0 %}
+                <a class="btn btn-light my-4 btn-lg text-capitalize" href="{% url 'cart.clear' %}">clear cart</a>
+                {% else %}
+                <a class="btn btn-light my-4 btn-lg text-capitalize disabled" href="">clear cart</a>
+                {% endif %}
+                
+                <a class="btn btn-outline-secondary my-4 ms-3 btn-lg">
+                    <b class="text-uppercase">total to pay:</b> £{{ template_data.cart_total }}
                 </a>
             </div>
         </section>
