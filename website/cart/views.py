@@ -61,7 +61,6 @@ def purchase(request):
     order.total = cart_total
     order.save()
 
-
     for movie in movies_in_cart:
         item.movie = movie
         item.price = movie.price
@@ -73,4 +72,10 @@ def purchase(request):
     template_data = {}
     template_data['title'] = 'Purchase confirmation'
     template_data['order_id'] = order.id
-    return render(request, 'cart/purchase.html', {'template_data': template_data})
+    return render(
+        request,
+        'cart/purchase.html',
+        {
+            'template_data': template_data
+        }
+    )
