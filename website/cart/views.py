@@ -47,8 +47,6 @@ def clear(request):
 @login_required
 def purchase(request):
     cart = request.session.get('cart', {})
-    order = Order()
-    item = Item()
     movie_ids = list(cart.keys())
 
     if not movie_ids:
@@ -56,6 +54,8 @@ def purchase(request):
     
     movies_in_cart = Movie.objects.filter(id__in=movie_ids)
     cart_total = calculate_cart_total(cart, movies_in_cart)
+    order = Order()
+    item = Item()
 
     order.user = request.user
     order.total = cart_total
