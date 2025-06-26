@@ -1,0 +1,75 @@
+/**************************************************
+ *****************   Base rules   ***************** 
+ **************************************************/
+
+:root {
+
+  /* colour palette */
+
+  --black:           #000;
+  --dark-grey:       #333;
+  --dark-slate-grey: #335C67; /* theme colour */
+  --grey:            #ccc;
+  --light-grey:      #ebebeb;
+  --off-white:       #f5f5f5;
+  --white:           #fff;
+  --blue:            #3498db;
+  --brown:           #540b0e; /* theme colour */
+  --dark-red:        #9e2a2b; /* theme colour */
+  --red:             #e74c3c;
+  ---dark-yellow:    #e09f3e; /* theme colour */
+  --yellow:          #f1c40f;
+  --light-yellow:    #FFF3B0; /* theme colour */
+
+
+  /* Backgrounds */
+
+  --bg-primary: var(--light-yellow);
+  --bg-secondary: var(--dark-red);
+  --bg-light: var(--white);
+  --bg-inverse: var(--brown);
+
+
+  /* Text */
+
+  --txt-primary: var(--dark-grey);
+  --txt-secondary: var(--dark-slate-grey);
+  --txt-loud: var(--black);
+  --txt-inverses: var(--white);
+  --txt-heading: var(--dark-red);
+  --txt-subheading: var(--brown);
+
+
+  /* Links */
+
+  --link-primary: var(--dark-red);
+  --link-primary-hover: var(--dark-slate-grey);
+
+
+  /* Borders */
+
+  --bdr-primary: var(---dark-yellow);
+  --bdr-secondary: var(--brown);
+  --bdr-focus: var(---dark-yellow);
+  --bdr-size: 2px;
+  --bdr-type: solid;
+
+
+  /* Typography */
+
+  --font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  --base-font-size: 14px;
+  --font-size: 1rem;
+  --font-style-normal: normal;
+  --font-style-italic: italic;
+  --font-weight-light: 200;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --base-line-height: 1.5;
+
+
+  /* Layout */
+
+  --margin: 1rem;
+  --padding: 1rem;
+}
