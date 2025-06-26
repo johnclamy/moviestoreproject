@@ -12,11 +12,6 @@
   }
 }
 
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
@@ -39,8 +34,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-family);
+  background: var(--bg-primary);
+  line-height: var(--base-line-height);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--base-font-size);
+  font-style: var(--font-style-normal);
+  color: var(--txt-primary);
 }
+
+
+/**************************************************
+ ****************   Layout rules   **************** 
+ **************************************************/
+ 
