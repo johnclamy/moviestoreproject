@@ -49,4 +49,31 @@ body {
 /**************************************************
  ****************   Layout rules   **************** 
  **************************************************/
- 
+
+
+/**************************************************
+ *****************   Page rules   ***************** 
+ **************************************************/
+
+ /* home page */
+.hero-title {
+  font-size: calc(var(--font-size) * 1.85);
+  margin-bottom: calc(var(--margin) * 0.15);
+}
+
+.hero-title-name > span {
+  text-transform: capitalize;
+  font-weight: var(--font-weight-normal);
+}
+
+.hero-title-name-first {
+  color: var(--red);
+}
+
+.hero-title-name-middle {
+  color: var(--yellow);
+}
+
+.hero-title-name-last {
+  color: var(--blue);
+}
