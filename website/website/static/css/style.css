@@ -29,6 +29,10 @@ p {
   text-wrap: pretty;
 }
 
+b {
+  font-weight: var(--font-weight-normal) !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
@@ -55,3 +59,31 @@ body {
  **************************************************/
 
  /* home page */
+.hero-title {
+  color: var(--txt-heading);
+  font-size: calc(var(--font-size) * 1.1);
+  background: var(--bg-primary);
+  padding: calc(var(--padding) * 0.5) 0;
+  border-radius: 1rem;
+}
+
+.hero-title > p {
+  color: var(--txt-subheading);
+}
+
+.hero-title-name > span {
+  text-transform: uppercase !important;
+  font-weight: var(--font-weight-bold);
+}
+
+.hero-title-name-first {
+  color: var(--red);
+}
+
+.hero-title-name-middle {
+  color: var(--yellow);
+}
+
+.hero-title-name-last {
+  color: var(--blue);
+}
