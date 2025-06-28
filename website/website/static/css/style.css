@@ -58,7 +58,7 @@ body {
  *****************   Page rules   ***************** 
  **************************************************/
 
- /* home page */
+ /* home page - hero carousel */
 .carousel-caption {
   right: 20% !important;
   left: 20% !important;
@@ -91,4 +91,41 @@ body {
 
 .hero-title-name-last {
   color: var(--blue);
+}
+
+ /* home page - feature cards */
+ .feature-cards {
+  background-color: var(--bg-primary);
+  color: var(--txt-secondary);
+ }
+
+.feature-service-card {
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    border-radius: 15px;
+}
+
+.feature-service-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.feature-gradient-custom {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-inverse) 100%);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-inverse) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
