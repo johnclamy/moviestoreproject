@@ -59,6 +59,11 @@ body {
  **************************************************/
 
  /* home page */
+.carousel-caption {
+  right: 20% !important;
+  left: 20% !important;
+}
+
 .hero-title {
   color: var(--txt-heading);
   font-size: calc(var(--font-size) * 1.1);
