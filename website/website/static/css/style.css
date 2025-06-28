@@ -34,9 +34,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
   font-family: var(--font-family);
-  background: var(--bg-primary);
+  background: var(--bg-light);
   line-height: var(--base-line-height);
   font-optical-sizing: auto;
   font-weight: var(--font-weight-normal);
@@ -56,24 +55,3 @@ body {
  **************************************************/
 
  /* home page */
-.hero-title {
-  font-size: calc(var(--font-size) * 1.85);
-  margin-bottom: calc(var(--margin) * 0.15);
-}
-
-.hero-title-name > span {
-  text-transform: capitalize;
-  font-weight: var(--font-weight-normal);
-}
-
-.hero-title-name-first {
-  color: var(--red);
-}
-
-.hero-title-name-middle {
-  color: var(--yellow);
-}
-
-.hero-title-name-last {
-  color: var(--blue);
-}
