@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="author" content="">
+    <meta name="author" content="John C Lamy">
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>{{data.page_title}}</title>
@@ -18,63 +18,15 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
 </head>
-<body>
-    <header>
-        <div class="search-popup-wrapper"> {# header popup modal #}
-            <div class="search-popup-container">
-                <form role="search" method="GET" class="search-form-container" action="">
-                    <input type="search" id="search-form-input" class="search-form-input" placeholder="Type and press enter" value="" name="">
-                    <button type="submit" class="search-form-submit">
-                        <a href="#"><i class="icon icon-search"></i></a>
-                    </button>
-                </form>
-                <h1 class="cat-list-title">browse categories</h1>
-                <ul class="cat-list">
-                    <li class="cat-list-item">
-                        <a href="shop.html" title="luxury dog breeds">luxury breeds</a>
-                    </li>
-                    <li class="cat-list-item">
-                        <a href="shop.html" title="Fashionable dog breeds">fashionable breeds</a>
-                    </li>
-                    <li class="cat-list-item">
-                        <a href="shop.html" title="Casual dog breeds">Casual Breeds</a>
-                    </li>
-                    <li class="cat-list-item">
-                        <a href="shop.html" title="All Dog breeds">all dog breeds</a>
-                    </li>
-                    <li class="cat-list-item">
-                        <a href="shop.html" title="Puppie sellection">puppies</a>
-                    </li>
-                    <li class="cat-list-item">
-                        <a href="shop.html" title="Family friendly dogs">family friendly</a>
-                    </li>
-                    <li class="cat-list-item">
-                        <a href="shop.html" title="Trained dogs">trained dogs</a>
-                    </li>
-                </ul>
-            </div>
-        </div> {# END header popup modal #}
-        <section id="header-top-wrapper"> {# header top #}
-            <div id="header-top-container">
-                <div>
-                    <div class="container">
-                        <div class="row d-flex align-items-center">
-                            <div class="col-md-4 header-contact">
-                                <p>Let's talk! <strong>+44 444 11 00 35</strong></p>
-                            </div>
-                            <div class="col-md-4 shipping-purchase text-center">
-                                <p>Free shipping on a purchase value of £2000.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> {# END header top #}
-            
-        <nav>{# header bottom navbar #}
-
-        </nav> {# END header bottom navbar #}
-    </header>
+<body class="nunito-sans-typography">
+    <nav class="navbar">
+        <a href="#" class="nav_link">home</a>
+        <a href="#" class="nav_link">about us</a>
+        <a href="#" class="nav_link">pets</a>
+        <a href="#" class="nav_link">cart</a>
+        <a href="#" class="nav_link">orders</a>
+        <a href="#" class="nav_link_end">sign in</a>
+    </nav>
     <main>
         {% block content %}
         {% endblock content %}
