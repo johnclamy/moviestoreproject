@@ -1,0 +1,131 @@
+:root {
+    --black:      #001524; /* app palette */
+    --grey:       #CCCCCC;
+    --light-grey: #EBEBEB;
+    --off-white:  #FFECD1; /* app palette */
+    --white:      #FFFFFF;
+    --blue-one:   #3498DB;
+    --blue-two:   #2980B9;
+    --red-one:    #E74C3C;
+    --red-two:    #C0392B;
+    --yellow-one: #F1C40F;
+    --yellow-two: #F39C12;
+    --green-one:  #2ECC71;
+    --green-two:  #27AE60;
+    --orange-one: #FF7D00; /* app palette */
+    --orange-two: #D35400;
+    --brown-one:  #C99977;
+    --brown-two:  #78290F; /* app palette */
+    --teal-one:   #008080;
+    --teal-two:   #15616D; /* app palette */
+
+    /* Backgrounds */
+    --primary-bg: var(--brown-two);
+    --secondary-bg: var(--orange-one);
+    --third-bg: var(--off-white);
+    --forth-bg: var(--teal-two);
+    --inverse-bg: var(--black);
+
+    /* Text */
+    --primary-txt: var(--black);
+    --secondary-txt: var(--teal-two);
+    --light-txt: var(--off-white);
+    --loud-txt: var(--orange-one);
+    --inverse-txt: var(--white);
+
+    /* Links */
+    --primary-link-dark: var(--teal-two);
+    --primary-link-dark-hover: var(--black);
+    --primary-link-light: var(--off-white);
+    --primary-link-light-hover: var(--white);
+
+    /* Borders */
+    --primary-border: var(--black);
+    --secondary-border: var(--teal-two);
+    --third-border: var(--orange-one);
+    --forth-border: var(--off-white);
+    --primary-border-focus: var(--teal-two);
+    --secondary-border-focus: var(--black);
+    --primary-border-focus-light: var(--off-white);
+    --secondary-border-focus-light: var(--orange-one);
+    --border-size: 1px;
+    --border-type: solid;
+
+    /* Typography */
+    --base-font-size: 14px;
+    font-size: 1rem;
+    --base-line-height: 1.5;
+
+    /* Layout */
+    --margin: 1rem;
+    --padding: 1rem;
+}
+
+body {
+   color: var(--primary-txt);
+   font-size: var(--base-font-size);
+   line-height: var(--base-line-height);
+}
+
+em,
+b {
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+}
+
+a,
+a:link,
+a:visited {
+    color: var(--primary-link-light);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-link-light-hover);
+}
+
+.oswald-title-heading {
+  font-family: "Oswald", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.nunito-sans-typography {
+  font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+.rounded-corners {
+    border-radius: 3px;
+}
+
+.navbar {
+    background-color: var(--primary-bg);
+    font-size: 1.3rem;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 0 22rem;
+}
+
+.nav_link {
+    margin-right: calc(var(--margin) * 1.5);
+}
+
+.nav_link_end {
+    margin-left: auto;
+}
+
+.wrapper {
+    max-width: 1400px;
+    max-width: 0 auto;
+}
