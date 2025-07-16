@@ -111,7 +111,7 @@ a:hover {
 .navbar {
     background-color: var(--primary-bg);
     font-size: 1.3rem;
-    min-height: 3rem;
+    min-height: 4rem;
     display: flex;
     align-items: center;
     padding: 0 22rem;
@@ -119,10 +119,12 @@ a:hover {
 
 .nav_link {
     margin-right: calc(var(--margin) * 1.5);
+    text-transform: capitalize;
 }
 
 .nav_link_end {
     margin-left: auto;
+    text-transform: uppercase;
 }
 
 .wrapper {
