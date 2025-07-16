@@ -108,7 +108,7 @@ a:hover {
     border-radius: 3px;
 }
 
-.navbar {
+/* .navbar {
     background-color: var(--primary-bg);
     font-size: 1.3rem;
     min-height: 4rem;
@@ -130,4 +130,4 @@ a:hover {
 .wrapper {
     max-width: 1400px;
     max-width: 0 auto;
-}
+} */
