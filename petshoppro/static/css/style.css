@@ -208,7 +208,7 @@ ul li a.active {
     background-color: black;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1320px) {
     nav {
         border-bottom: 1px solid var(--secondary-border);
     }
