@@ -21,27 +21,20 @@
 <body class="nunito-sans-typography">
     <nav class="navbar-container">
         <a href="#" class="navbar-logo">petzy</a>
-        <input id="navbar-menu-btn" class="navbar-menu-btn" type="checkbox">
-        <label for="navbar-menu-btn" class="navbar-menu-btn-icon">
-            <i class="navbar-menu-btn-icon-bars" aria-hidden="true"></i>
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" id="icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </label>
-        <section class="navbar-menu-navlinks">
-            <a href="#" class="navbar-menu-navlink">home</a>
-            <a href="#" class="navbar-menu-navlink">about us</a>
-            <a href="#" class="navbar-menu-navlink">pets</a>
-            <div class="navbar-menu-navlinks_end">
-                <a href="#" class="navbar-menu-navlink">
-                    <i class="fa fa-shopping-cart" aria-hidden="true" title="Shopping cart"></i>
-                </a>
-                <a href="#" class="navbar-menu-navlink">
-                    <i class="fa fa-list-ul" aria-hidden="true" title="List of orders"></i>
-                </a>
-                <a href="#" class="navbar-menu-navlink">
-                    <i class="fa fa-sign-in" aria-hidden="true" title="Sign in"></i>
-                </a>
-            </div>
-        </section>
-    </nav>    
+        <ul>
+            <li><a href="#" class="active">home</a></li>
+            <li><a href="#">pets</a></li>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">orders</a></li>
+            <li><a href="#">cart</a></li>
+            <li><a href="#">sign up</a></li>
+            <li><a href="#">sign in</a></li>
+        </ul>
+    </nav>  
     <main>
         {% block content %}
         {% endblock content %}
