@@ -181,32 +181,6 @@ ul li a.active {
 #icon {
     display: none;
 }
-/* Youtube link */
-.link {
-    position: fixed;
-    background-color: #D12322;
-    padding: 23px 40px;
-    right: -100px;
-    border-radius: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    transform: rotate(-90deg);
-    font-size: 18px;
-    font-weight: 500;
-    color: #FFF;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: all .1s ease-in-out;
-}
-
-.link i {
-    padding-left: 7px;
-}
-
-.link:hover {
-    text-decoration: underline;
-    background-color: black;
-}
 
 @media (max-width: 1320px) {
     nav {
@@ -223,6 +197,7 @@ ul li a.active {
         text-align: center;
         display: none;
         margin-top: 71px;
+        z-index: 3;
     }
 
     ul li {
@@ -241,6 +216,55 @@ ul li a.active {
 
     #checkbox:checked~ul {
         display: block;
+    }
+}
+
+/* Hero banner */
+
+.masthead {
+    background-size: cover;
+    min-height: 60vh;
+    position: relative;
+    color: var(--light-txt);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+    
+}
+
+.banner {
+    background-image: url('/static/imgs/banner.jpg');
+}
+
+.banner-header {
+    margin-top: calc(var(--margin) * 4);
+    font-size: calc(var(--font-size) * 6.5);
+    color: var(--light-txt);
+    letter-spacing: 0.12rem;
+    word-spacing: 0.24rem;
+}
+
+.banner-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+}
+ 
+@media (max-width: 980px) {
+    .masthead {
+        min-height: 30vh;
+    }
+
+    .banner-header {
+        margin-top: calc(var(--margin) * 2);
+        font-size: calc(var(--font-size) + 3.3vw);
+        letter-spacing: 0.022rem;
+        word-spacing: 0.095rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .banner-header {
+        font-size: calc(var(--font-size) + 4.5vw);
     }
 }
 
